@@ -6,7 +6,7 @@ import requests
 import string
 import random
 
-# bot made by goose.mp4
+# bot made for coding support server
 
 # discord.py API docs: https://discordpy.readthedocs.io/en/latest/api.html
 intents = discord.Intents.default()
