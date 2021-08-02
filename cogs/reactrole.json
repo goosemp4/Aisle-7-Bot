@@ -1,0 +1,212 @@
+[
+    {
+        "roleName": "Python",
+        "roleID": 862825101430489088,
+        "emoji": "<:python:870355551496855592>",
+        "messageID": "871515320832118851"
+    },
+    {
+        "roleName": "Python",
+        "roleID": 862825101430489088,
+        "emoji": "<:python:870355551496855592>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Java",
+        "roleID": 862825130840817715,
+        "emoji": "<:java:870357956393308260>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "C",
+        "roleID": 862825169251467304,
+        "emoji": "<:c_:870357957471252512>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "C#",
+        "roleID": 862825204048723978,
+        "emoji": "<:csharp:870357959857811486>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "C++",
+        "roleID": 862825234809749544,
+        "emoji": "<:cplusplus:870357957693567057>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Objective C",
+        "roleID": 862825277741465621,
+        "emoji": "<:objc:871509579928850503>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "JS",
+        "roleID": 862825410822930452,
+        "emoji": "<:javascript:870357955390889985>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "HTML",
+        "roleID": 862825333997043712,
+        "emoji": "<:html:870357955726442657>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "CSS",
+        "roleID": 862825370519863357,
+        "emoji": "<:css:870357958280769576>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "SQL",
+        "roleID": 862825433816104971,
+        "emoji": "<:sql:871509580608339978>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "PHP",
+        "roleID": 862878712441470986,
+        "emoji": "<:php:870357957659983932>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Swift",
+        "roleID": 862825465881427968,
+        "emoji": "<:swift:871509580784492554>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Ruby",
+        "roleID": 862825495947247638,
+        "emoji": "<:ruby:870357960046542908>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Perl",
+        "roleID": 862825533518381076,
+        "emoji": "<:perl:871509582508347422>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Visual Basic",
+        "roleID": 862825564380987392,
+        "emoji": "\ud83d\udc41\ufe0f",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Lua",
+        "roleID": 862825585420402688,
+        "emoji": "<:lua:870357958213640252>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Rust",
+        "roleID": 862825617564893225,
+        "emoji": "<:rust:871509581833064487>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "TypeScript",
+        "roleID": 867918442257334332,
+        "emoji": "<:typescript:871509580096606260>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "GO",
+        "roleID": 867918493788557432,
+        "emoji": "<:go:871509579819798538>",
+        "messageID": "871506348767084584"
+    },
+    {
+        "roleName": "Pygame",
+        "roleID": 871209539914051584,
+        "emoji": "<:pygame:871525872539156540>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "JQuery",
+        "roleID": 871210235417755700,
+        "emoji": "<:jquery:871525870924333066>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": ".NET",
+        "roleID": 871210269332865075,
+        "emoji": "<:net:871526007037915146>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Django",
+        "roleID": 871210297283710986,
+        "emoji": "<:django:871525872493031434>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Angular.js",
+        "roleID": 871209585464209448,
+        "emoji": "<:angular:871525869905149982>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Express.js",
+        "roleID": 871210337792303164,
+        "emoji": "<:javascript:870357955390889985>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "React.js",
+        "roleID": 871209633036009513,
+        "emoji": "<:react:871525872505593856>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Kaboom.js",
+        "roleID": 871210372282085408,
+        "emoji": "<:kaboom:871525872463646771>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Noobie",
+        "roleID": 871544676904239165,
+        "emoji": "1\ufe0f\u20e3",
+        "messageID": "871507602780078120"
+    },
+    {
+        "roleName": "Beginner",
+        "roleID": 871544708969672705,
+        "emoji": "2\ufe0f\u20e3",
+        "messageID": "871507602780078120"
+    },
+    {
+        "roleName": "Good",
+        "roleID": 871544760001773569,
+        "emoji": "3\ufe0f\u20e3",
+        "messageID": "871507602780078120"
+    },
+    {
+        "roleName": "Expert",
+        "roleID": 871817820546142239,
+        "emoji": "4\ufe0f\u20e3",
+        "messageID": "871507602780078120"
+    },
+    {
+        "roleName": "Degree in CS",
+        "roleID": 871544822492692541,
+        "emoji": "5\ufe0f\u20e3",
+        "messageID": "871507602780078120"
+    },
+    {
+        "roleName": "Discord.py",
+        "roleID": 862879928717672448,
+        "emoji": "<:discordpy:870357958054273124>",
+        "messageID": "871506827785941012"
+    },
+    {
+        "roleName": "Discord.js",
+        "roleID": 862879950108360744,
+        "emoji": "<:discordjs:870357957546758144>",
+        "messageID": "871506827785941012"
+    }
+]

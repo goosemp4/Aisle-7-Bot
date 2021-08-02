@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from datetime import date
+import json
 
 client = discord.Client()
 
@@ -21,16 +22,34 @@ class Cmds(commands.Cog):
 
 		msg = message.content
 
-		blacklist = [" "]
+		blacklist = ["nigger", "fag","faggot","fggt","fagg","faggt","ngger","ngger","n1gger","n1gg3r","nigg3r","ngg3r", "n1ggr","f4g","f4ggot","f4gg0t","f4ggt","fgg0t"]
 
 		try:
 
 			check = blacklist.index(msg)
 			await message.delete()
+			await message.author.send(":no_entry_sign: You have been detected of saying an innopropriate word. Your message has been deleted; do **NOT** say that.")
 
 		except ValueError:
 			pass
 
+
+	@commands.command()
+	async def mverify(self, ctx, member:discord.Member):
+		"""Manually verify a member that could not/did not get captcha solved"""
+
+		for i in ctx.author.roles:
+			if i.id == 862811341772423190:
+				await ctx.channel.purge(limit=1)
+
+				await member.add_roles(member.guild.get_role(862811433662545940))
+				await member.add_roles(member.guild.get_role(862813454812971088))
+				await member.add_roles(member.guild.get_role(862829754779303956))
+				await member.add_roles(member.guild.get_role(862813524870299668))
+				await member.remove_roles(member.guild.get_role(871477918369468416))
+				
+			else:
+				pass
 
 
 	@commands.command()	
@@ -64,6 +83,11 @@ class Cmds(commands.Cog):
 			icon_url=ctx.author.avatar_url
 		)
 
+		try:
+			await member.send(f"You have been kicked from Aisle #7 for: **{reason}**")
+		except discord.Forbidden:
+			pass
+
 		await member.kick(reason=reason)
 		await ctx.send(embed=kickMessage)
 
@@ -88,6 +112,11 @@ class Cmds(commands.Cog):
 			text=f"banned by {ctx.author.display_name}",
 			icon_url=ctx.author.avatar_url
 		)
+
+		try:
+			await member.send(f"You have been banned from Aisle #7 for: **{reason}**")
+		except discord.Forbidden:
+			pass
 
 		await member.ban(reason=reason)
 		await ctx.send(embed=banMessage)
@@ -170,6 +199,7 @@ class Cmds(commands.Cog):
 		await message.add_reaction(check)
 		await message.add_reaction(x)
 
+
 	
 	@commands.command(pass_context=True)
 	@commands.has_permissions(administrator=True)
@@ -250,6 +280,79 @@ class Cmds(commands.Cog):
 
 		await ctx.send(embed=roleEmbed)
 			
+
+
+	@commands.Cog.listener()
+	async def on_raw_reaction_add(self, payload):
+		"""Detects reactions for react-role"""
+
+		if payload.member.bot is True:
+			pass
+		
+		else:
+			with open('cogs/reactrole.json') as rrFile:
+				dataStuff = json.load(rrFile)
+				for x in dataStuff:
+					if x['emoji'] == str(payload.emoji) and x['messageID'] == str(payload.message_id):
+	
+						role = discord.utils.get(self.client.get_guild(payload.guild_id).roles, id = x['roleID'])
+
+						await payload.member.add_roles(role)
+
+
+		
+
+	@commands.Cog.listener()
+	async def on_raw_reaction_remove(self, payload):
+		"""Removes role if user removes reaction"""
+
+		with open('cogs/reactrole.json') as rrFile:
+			dataStuff = json.load(rrFile)
+			for x in dataStuff:
+				if x['emoji'] == str(payload.emoji) and x['messageID'] == str(payload.message_id):
+
+					role = discord.utils.get(self.client.get_guild(payload.guild_id).roles, id = x['roleID'])
+
+					await self.client.get_guild(payload.guild_id).get_member(payload.user_id).remove_roles(role)
+
+
+
+	@commands.command(pass_context=True)
+	@commands.has_permissions(administrator=True)
+	async def rr(self, ctx, channel, msgID, emoji, role: discord.Role):
+		"""React role"""
+		
+		channelid = ""
+		for i in channel:
+			try:
+				i = int(i)
+				i = str(i)
+				channelid += i
+
+			except ValueError or TypeError:
+				pass
+
+		await self.client.wait_until_ready()
+		channel = self.client.get_channel(int(channelid))
+		message = await channel.fetch_message(msgID)
+		await message.add_reaction(emoji)
+
+		with open("cogs/reactrole.json") as jfile:
+			data = json.load(jfile)
+
+			new_reactrole = {
+				'roleName':role.name,
+				'roleID':role.id,
+				'emoji':emoji,
+				'messageID':msgID
+			}
+
+			data.append(new_reactrole)
+		
+		with open("cogs/reactrole.json", "w") as f:
+			json.dump(data, f, indent=4)
+		
+		await ctx.reply("<a:check:871473852465709146> Reaction role successfully added!")
 
 
 
